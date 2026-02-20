@@ -27,7 +27,7 @@ void seven_seg_init() {
     }
 }
 
-void seven_seg_display(int* cnt) {
+void seven_seg_display(const int* cnt) {
     int value = bits[*cnt];
     for (int i = 0; i < 7; i++) {
         int gpio = FIRST_GPIO + i;
@@ -40,7 +40,6 @@ int main() {
     stdio_init_all();
     int cnt = 0;
     int last_btn = 1;
-    int BUTTON_GPIO = FIRST_GPIO + 7;
 
     gpio_init(BTN_PIN_G);
     gpio_set_dir(BTN_PIN_G, GPIO_IN);
