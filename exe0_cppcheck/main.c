@@ -11,10 +11,12 @@ int multiplyNumbers(int x, int y) {
 int main(void) {
     int a=5,b=2; //uninitvar, legacyUninitvar
     int result = multiplyNumbers(a, b);
+    printf("%d\n",result);
 
     int arr[NUM_ELEMENTS];
     for(int i = 0; i < NUM_ELEMENTS; i++) { //arrayIndexOutOfBounds
         arr[i] = i;
+        printf("%d\n",arr[i]);
     }
 
     return 0;
